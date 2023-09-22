@@ -1,113 +1,76 @@
 import Image from 'next/image'
-
+import Header from './Components/Header/Header'
+import Searchbar from './Components/Searchbar/Searchbar'
+import Offerbox from './Components/Offerbox/Offerbox'
+import Fooditems from './Components/Fooditems/Fooditems'
+import Hotelcard from './Components/Hotelcard/Hotelcard'
+import Sort from './Components/Sort/Sort'
+import Navigator from './Components/Navigator/Navigator'
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div>
+    <Header />
+    <Searchbar />
+    <h2 className = 'tracking-wider mt-[90px] text-center'>Explore</h2>
+    <Offerbox />
+    <h2 className = 'tracking-wider mt-[30px] text-center'>WHAT'S ON YOUR MIND ?</h2>
+    <div className = 'flex ml-[25px] gap-[50px] text-center  overflow-x-auto'>
+      <Fooditems image = {"https://img.freepik.com/free-photo/meat-dish-with-vegetables_144627-18109.jpg?w=1060&t=st=1695451950~exp=1695452550~hmac=751dec912fea1f4c012f9d0407992e2f79b1c056087fc81d6a86db1d43c5409e"} itemName = {'North Indian'} />
+      <Fooditems image = {"https://img.freepik.com/premium-photo/paneer-curry_57665-7126.jpg?w=1060"} itemName = {'Paneer'} />
+      <Fooditems image = {"https://img.freepik.com/free-photo/fried-noodles-with-shrimp_1339-2477.jpg?w=996&t=st=1695453015~exp=1695453615~hmac=0e3ebd586cc3d058ab4a0c029c3a33d74c86184fa5b4c15b0f82144843d3c1af"}  itemName = {'Chinese'} />
+      <Fooditems image = {"https://img.freepik.com/premium-photo/plate-food-with-bowl-red-sauce-it_667286-853.jpg"} itemName = {'Momos'} />
+      <Fooditems  className ='h-[30px]' image ={"https://img.freepik.com/premium-photo/katori-chaat_57665-3597.jpg"}  itemName = {'Chaat'} />
+      <Fooditems image = {"https://img.freepik.com/premium-photo/sandwich-with-tomato-lettuce-ham-cheese-isolated-white-background_123827-18082.jpg?w=1060"
+      } itemName = {'Sandwich'} />
+      <Fooditems  image = {"https://img.freepik.com/premium-photo/chocolate-cherry-cake_50944-290.jpg?w=1060"} itemName = {'Pastry'} />
+      <Fooditems image = {"https://img.freepik.com/free-photo/spaghetti-with-vegetablesbroccolitomatoespeppers-isolated-white-background_123827-21223.jpg?w=1060&t=st=1695452475~exp=1695453075~hmac=f1994d6f7ca36fdb17ecb4bc5a2128a3bae09f501b1c6e594098c8eab64fdd48"} itemName = {'Chowmein'} />
+      <Fooditems  image={"https://img.freepik.com/premium-photo/pasta-with-tomatoes-basil-is-isolated-white-background_166116-5594.jpg?w=740"} itemName = {'Italian'} />
+    </div>
+    <div className = 'flex ml-[25px] gap-[50px] text-center  overflow-x-auto'>
+      <Fooditems image = {"https://img.freepik.com/premium-photo/pink-cake-decorated-with-flowers-isolated-white-background-ai-generative_123827-24764.jpg?w=1060"} itemName = {'Cake'} />
+      <Fooditems image = {"https://img.freepik.com/free-photo/fresh-potatoes-fri-with-souce_144627-5503.jpg?w=1060&t=st=1695486033~exp=1695486633~hmac=224b3a8ffc21b68ec2168e8c3eb084b97c9541ecc7ca60f2d291d3157819ad88"} itemName = {'Fries'} />
+      <Fooditems image = {"https://img.freepik.com/free-photo/delicious-milkshake_144627-27513.jpg?w=360&t=st=1695485886~exp=1695486486~hmac=c78f416b9e5b6c9481cffcce0daef8ac8850c9e0cdb72392fcea777ea0692e39"}  itemName = {'Milk shake'} />
+      <Fooditems image = {"https://img.freepik.com/free-photo/fried-rice_1203-8380.jpg?w=1060&t=st=1695486088~exp=1695486688~hmac=a2594a9599954d5f1ecc7b74e58067b0e300e680a96fae1f3d1dbf7b8757d7cb"} itemName = {'Rice'} />
+      <Fooditems  className ='h-[30px]' image ={"https://img.freepik.com/premium-photo/katori-chaat_57665-3597.jpg"}  itemName = {'Chaat'} />
+      <Fooditems image = {"https://img.freepik.com/premium-photo/sandwich-with-tomato-lettuce-ham-cheese-isolated-white-background_123827-18082.jpg?w=1060"
+      } itemName = {'Sandwich'} />
+      <Fooditems  image = {"https://img.freepik.com/premium-photo/chocolate-ice-cream-cone-isolate-white-background-generative-ai_74760-2613.jpg?size=626&ext=jpg&ga=GA1.1.578863645.1686928461&semt=ais"} itemName = {'Ice Cream'} />
+      <Fooditems image = {"https://img.freepik.com/premium-photo/indian-cuisine-vegetable-manchurian-white-background_55610-1878.jpg?w=996"} itemName = {'Manchurian'} />
+      <Fooditems  image={"https://img.freepik.com/premium-photo/masala-dosa-is-south-indian-meal-served-with-sambhar-coconut-chutney-selective-focus_466689-22907.jpg?w=1060"} itemName = {'South Indian'} />
+    </div>
+    <h2 className = 'tracking-wider mt-[30px] text-center'>ALL RESTAURANTS</h2>
+    <Sort />
+    <p className = 'text-center mt-[15px] text-gray-500'>140 restaurants delivering to you</p>
+    <p className = 'text-center  text-gray-500'>FEATURED</p>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" hotelname = {'Biggies Pizza'} hoteldetail = {'Pizza.Burger.₹100 for one'}deliveryTiming= {'30-35 min.2Km'}rating={'4.1'}offer={'10% OFF up to 40'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1552590635-27c2c2128abf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Haji Maqbool ki Tahri'} hoteldetail = {'North Indian.₹200 for one'} deliveryTiming = {'20-25 min.3Km'} rating = {'4.1'} offer = {'60% OFF up to ₹120'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1690401767645-595de0e0e5f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1913&q=80" hotelname = {'The Spice Villa Cafe'} hoteldetail = {'North Indian.Fast Food.₹200 for one'} deliveryTiming = {'30-35 min.2Km'} rating = {'3.8'} offer = {'40% OFF up to ₹80'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Anna'} hoteldetail = {'South Indian.₹200 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'4.1'} offer = {'50% OFF up to ₹100'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" hotelname = {'7 Eleven'} hoteldetail = {'North Indian.Chinese.₹150 for one'} deliveryTiming = {'30-35 min.1Km'} rating = {'3.9'} offer = {'20% OFF up to ₹50'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1899&q=80" hotelname = {'Burger King'} hoteldetail = {'Burger.Fast Food.₹150 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'4.1'} offer = {'Get items @ ₹129 only'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1669340781012-ae89fbac9fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Black Brickks'} hoteldetail = {'North Indian.Pizza.₹200 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'3.9'} offer = {'20% OFF up to ₹50'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" hotelname = {'Biggies Pizza'} hoteldetail = {'Pizza.Burger.₹100 for one'}deliveryTiming= {'30-35 min.2Km'}rating={'4.1'}offer={'10% OFF up to 40'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1552590635-27c2c2128abf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Haji Maqbool ki Tahri'} hoteldetail = {'North Indian.₹200 for one'} deliveryTiming = {'20-25 min.3Km'} rating = {'4.1'} offer = {'60% OFF up to ₹120'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1690401767645-595de0e0e5f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1913&q=80" hotelname = {'The Spice Villa Cafe'} hoteldetail = {'North Indian.Fast Food.₹200 for one'} deliveryTiming = {'30-35 min.2Km'} rating = {'3.8'} offer = {'40% OFF up to ₹80'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Anna'} hoteldetail = {'South Indian.₹200 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'4.1'} offer = {'50% OFF up to ₹100'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" hotelname = {'7 Eleven'} hoteldetail = {'North Indian.Chinese.₹150 for one'} deliveryTiming = {'30-35 min.1Km'} rating = {'3.9'} offer = {'20% OFF up to ₹50'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1899&q=80" hotelname = {'Burger King'} hoteldetail = {'Burger.Fast Food.₹150 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'4.1'} offer = {'Get items @ ₹129 only'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1669340781012-ae89fbac9fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Black Brickks'} hoteldetail = {'North Indian.Pizza.₹200 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'3.9'} offer = {'20% OFF up to ₹50'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" hotelname = {'Biggies Pizza'} hoteldetail = {'Pizza.Burger.₹100 for one'}deliveryTiming= {'30-35 min.2Km'}rating={'4.1'}offer={'10% OFF up to 40'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1552590635-27c2c2128abf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Haji Maqbool ki Tahri'} hoteldetail = {'North Indian.₹200 for one'} deliveryTiming = {'20-25 min.3Km'} rating = {'4.1'} offer = {'60% OFF up to ₹120'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1690401767645-595de0e0e5f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1913&q=80" hotelname = {'The Spice Villa Cafe'} hoteldetail = {'North Indian.Fast Food.₹200 for one'} deliveryTiming = {'30-35 min.2Km'} rating = {'3.8'} offer = {'40% OFF up to ₹80'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Anna'} hoteldetail = {'South Indian.₹200 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'4.1'} offer = {'50% OFF up to ₹100'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" hotelname = {'7 Eleven'} hoteldetail = {'North Indian.Chinese.₹150 for one'} deliveryTiming = {'30-35 min.1Km'} rating = {'3.9'} offer = {'20% OFF up to ₹50'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1899&q=80" hotelname = {'Burger King'} hoteldetail = {'Burger.Fast Food.₹150 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'4.1'} offer = {'Get items @ ₹129 only'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1669340781012-ae89fbac9fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Black Brickks'} hoteldetail = {'North Indian.Pizza.₹200 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'3.9'} offer = {'20% OFF up to ₹50'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" hotelname = {'Biggies Pizza'} hoteldetail = {'Pizza.Burger.₹100 for one'}deliveryTiming= {'30-35 min.2Km'}rating={'4.1'}offer={'10% OFF up to 40'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1552590635-27c2c2128abf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Haji Maqbool ki Tahri'} hoteldetail = {'North Indian.₹200 for one'} deliveryTiming = {'20-25 min.3Km'} rating = {'4.1'} offer = {'60% OFF up to ₹120'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1690401767645-595de0e0e5f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1913&q=80" hotelname = {'The Spice Villa Cafe'} hoteldetail = {'North Indian.Fast Food.₹200 for one'} deliveryTiming = {'30-35 min.2Km'} rating = {'3.8'} offer = {'40% OFF up to ₹80'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Anna'} hoteldetail = {'South Indian.₹200 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'4.1'} offer = {'50% OFF up to ₹100'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" hotelname = {'7 Eleven'} hoteldetail = {'North Indian.Chinese.₹150 for one'} deliveryTiming = {'30-35 min.1Km'} rating = {'3.9'} offer = {'20% OFF up to ₹50'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1899&q=80" hotelname = {'Burger King'} hoteldetail = {'Burger.Fast Food.₹150 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'4.1'} offer = {'Get items @ ₹129 only'}/>
+    <Hotelcard hotelImage = "https://images.unsplash.com/photo-1669340781012-ae89fbac9fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" hotelname = {'Black Brickks'} hoteldetail = {'North Indian.Pizza.₹200 for one'} deliveryTiming = {'25-30 min.1Km'} rating = {'3.9'} offer = {'20% OFF up to ₹50'}/>
+    <Navigator />
+    </div>
   )
 }

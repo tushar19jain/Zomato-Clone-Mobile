@@ -1,0 +1,15 @@
+.card{
+    border: 1px solid lightgray;
+    width: 350px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px lightgray
+}
+.card img{
+    border-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.ratingBox{
+    border-radius: 15px;
+}

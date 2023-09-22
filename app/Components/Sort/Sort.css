@@ -1,0 +1,17 @@
+ul li{
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    padding: 8px 12px;
+    width: 130px;
+    text-align: center;
+    box-shadow: 3px 3px 2px lightgray;
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: 15px;
+    overflow-x: auto;
+    font-size: 14px;
+}

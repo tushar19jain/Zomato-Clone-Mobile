@@ -1,0 +1,11 @@
+.box{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px 0px;
+    box-shadow: 3px 3px 12px lightgray;
+    transition: 0.5s ease-in-out;
+    border-radius: 12px; 
+}
+.box:hover{
+   transform: scale(96%);
+}
